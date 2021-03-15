@@ -14,7 +14,7 @@ The videos using these resources are listed below:
 [![Accompanying Video](http://img.youtube.com/vi/ZoL4jfu4gCQ/0.jpg)](http://www.youtube.com/watch?v=ZoL4jfu4gCQ)
 
 * How to to Manage a Hybrid Cluster Using RHACM Video Part 4 - Governance, Risk and Compliance <p />
-[![Accompanying Video](http://img.youtube.com/vi/89CR_t8wNCk0.jpg)](http://www.youtube.com/watch?v=89CR_t8wNCk)
+[![Accompanying Video](http://img.youtube.com/vi/89CR_t8wNCk/0.jpg)](http://www.youtube.com/watch?v=89CR_t8wNCk)
 
 ## 3. RESOURCE ORGANISATION
 The directory structure of the resources in this repository is shown below: <p />
