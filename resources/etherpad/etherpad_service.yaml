@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: etherpad
+  name: etherpad
+spec:
+  externalTrafficPolicy: Cluster
+  ports:
+  - name: etherpad
+    nodePort: 30091
+    port: 9001
+    protocol: TCP
+  selector:
+    app: etherpad
+  sessionAffinity: None
+  type: NodePort

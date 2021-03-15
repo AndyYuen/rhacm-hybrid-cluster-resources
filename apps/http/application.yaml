@@ -1,0 +1,43 @@
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: Channel
+metadata:
+  name: http-app-latest
+  namespace: http
+spec:
+  type: GitHub
+  pathname: https://github.com/AndyYuen/rhacm-arm-app.git
+---
+apiVersion: app.k8s.io/v1beta1
+kind: Application
+metadata:
+  name: http-app
+  namespace: http
+spec:
+  componentKinds:
+  - group: apps.open-cluster-management.io
+    kind: Subscription
+  descriptor: {}
+  selector:
+    matchExpressions:
+    - key: app
+      operator: In
+      values:
+      - http-app
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  name: http-app
+  namespace: http
+  labels:
+    app: http-app
+  annotations:
+    apps.open-cluster-management.io/github-path: resources/http
+spec:
+  channel: http/http-app-latest
+  placement:
+    placementRef:
+      kind: PlacementRule
+      name: dev-clusters
+
